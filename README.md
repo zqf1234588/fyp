@@ -96,7 +96,7 @@ under the `./SimCLR` directory run `testdataset.py`
 ![immage](demo.png)
 
 ## Dataset Download Links
-We used the following four datasets in our experiments:
+using the following four datasets in experiments:
 1. [refuge2](https://refuge.grand-challenge.org/Download/)
 2. [ORIGA](https://www.researchgate.net/deref/https://drive.google.com/open?id=1VPCvVsPgrfPNIl932xgU3XC_WFLUsXJR)
 3. [G1020](https://www.kaggle.com/datasets/arnavjain1/glaucoma-datasets)
