@@ -75,7 +75,10 @@ python run.py -data ./datasets/refuge2/train/images -dataset-name refuge2 --log-
 ```
 ### Train the Model
 under the directory `./SimCLR` 
-go to  `util.py` set your checkopoint `checkpoint = torch.load('Your pretrained weight', weights_only=True)['state_dict']` Line73,59,45
+go to  `util.py` set your checkopoint at Line73,59,45
+```python
+checkpoint = torch.load('Your pretrained weight', weights_only=True)['state_dict']
+```
 run 
 ```python
 python seg_train.py  --doubleEncoder 1  --freeze 0 --resolution 512 --train_batch_size 4 --backbone timm-efficientnet-b5 --num_train_epochs 250
