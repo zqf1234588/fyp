@@ -69,11 +69,12 @@ conda activate SimCLR
 pip install -r requirements.txt
 ```
 ### Pretrain
+demo run
 ```python
 python run.py -data ./datasets/refuge2/train/images -dataset-name refuge2 --log-every-n-steps 100 --epochs 500 --batch-size 4
 ```
 ### Train the Model
-under the ./SimCLR directory
+under the directory `./SimCLR` 
 go to  `util.py` set your checkopoint `checkpoint = torch.load('Your pretrained weight', weights_only=True)['state_dict']` Line73,59,45
 run 
 ```python
@@ -82,8 +83,8 @@ python seg_train.py  --doubleEncoder 1  --freeze 0 --resolution 512 --train_batc
 more dome instructions to run is in  `run.py`
 
 ### Run Inference and Visualize Results
-under the ./SimCLR directory, goto `testdataset.py` adapt encoder_name to coorect backbone for model you test (line 182, 189)
-under the ./SimCLR directoryrun `testdataset.py`
+under the `./SimCLR` directory, goto `testdataset.py` modify encoder_name to coorect backbone for model you test (line 182, 189)
+under the `./SimCLR` directory run `testdataset.py`
 ## Evaluation Metrics
 - Dice Coefficient
 - Intersection over Union (IoU)
@@ -93,6 +94,13 @@ under the ./SimCLR directoryrun `testdataset.py`
 - F1
 ## Example Visualization
 ![immage](demo.png)
+
+## Dataset Download Links
+We used the following four datasets in our experiments:
+1. [refuge2](https://refuge.grand-challenge.org/Download/)
+2. [ORIGA](https://www.researchgate.net/deref/https://drive.google.com/open?id=1VPCvVsPgrfPNIl932xgU3XC_WFLUsXJR)
+3. [G1020](https://www.kaggle.com/datasets/arnavjain1/glaucoma-datasets)
+4. [RIMONE](https://github.com/miag-ull/rim-one-dl)
 
 
 
